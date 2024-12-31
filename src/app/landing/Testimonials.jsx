@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import hemanth from "../../assets/hemanth.jpg";
-import prachit from "../../assets/prachit.png";
+import prachit from "../../assets/Prachit.png";
 import smit from "../../assets/Smit.png";
 import pramash from "../../assets/Pramash.png";
 
