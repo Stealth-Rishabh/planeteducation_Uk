@@ -173,7 +173,7 @@ const WhyStudyUK = () => {
 
           {/* Right side - Benefits Grid */}
           <div className="w-full relative z-10 lg:w-7/12">
-            <div className="bg-gray-50 rounded-3xl p-6 md:p-8">
+            <div className="bg-gray-50 shadow-xl rounded-3xl p-6 md:p-8">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
                 {benefits.map((benefit, index) => (
                   <div
