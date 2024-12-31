@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import hemanth from "../../assets/hemanth.jpg";
 import prachit from "../../assets/Prachit.png";
 import smit from "../../assets/Smit.png";
@@ -40,15 +40,36 @@ const testimonials = [
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  useEffect(() => {
+    let intervalId;
+    if (isAutoPlaying) {
+      intervalId = setInterval(() => {
+        setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+      }, 5000);
+    }
+
+    return () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+    };
+  }, [isAutoPlaying]);
 
   const nextTestimonial = () => {
+    setIsAutoPlaying(false);
     setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
   };
 
   const prevTestimonial = () => {
-    setActiveIndex(
-      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
-    );
+    setIsAutoPlaying(false);
+    setActiveIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const goToSlide = (index) => {
+    setIsAutoPlaying(false);
+    setActiveIndex(index);
   };
 
   return (
@@ -179,7 +200,7 @@ export default function Testimonials() {
           {testimonials.map((_, index) => (
             <button
               key={index}
-              onClick={() => setActiveIndex(index)}
+              onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === activeIndex
                   ? "bg-blue-600 w-6"
