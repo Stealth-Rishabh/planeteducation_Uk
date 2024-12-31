@@ -5,6 +5,7 @@ import About from "./About";
 import heroBg from "../../assets/hero-bg.png";
 import WhyStudyUK from "./WhyStudyUK";
 import ServicesTimeline from "./ServicesTimeline";
+import UniversityShowcase from "./UniversityShowcase";
 
 const Landing = () => {
   return (
@@ -23,6 +24,7 @@ const Landing = () => {
       </div>
       <About />
       <WhyStudyUK />
+      <UniversityShowcase />
       <ServicesTimeline />
     </>
   );
