@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import HeroSection from "./HeroSection";
 import About from "./About";
 import heroBg from "../../assets/hero-bg.png";
+import WhyStudyUK from "./WhyStudyUK";
 
 const Landing = () => {
   return (
@@ -20,6 +21,7 @@ const Landing = () => {
         <HeroSection />
       </div>
       <About />
+      <WhyStudyUK />
     </>
   );
 };

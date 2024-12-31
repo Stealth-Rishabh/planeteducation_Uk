@@ -3,7 +3,7 @@ import aboutBg from "../../assets/About.png";
 
 const About = () => {
   return (
-    <div className="relative mx-auto max-w-7xl w-full min-h-screen bg-gradient-to-br overflow-hidden flex justify-center items-center py-12">
+    <div className="relative mx-auto max-w-7xl w-full bg-gradient-to-br overflow-hidden flex justify-center items-center py-12 sm:py-20">
       {/* Decorative background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-20 left-10 w-72 h-72 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
@@ -12,10 +12,10 @@ const About = () => {
 
       {/* Main container */}
       <div className="container mx-auto px-4 h-full relative z-10">
-        <div className="flex flex-col md:flex-row items-center gap-8 sm:gap-0 h-full">
+        <div className="flex flex-col md:flex-row items-center gap-8 sm:gap-14 h-full">
           {/* Text content */}
           <div className="w-full md:w-1/2 animate-fade-in-left">
-            <div className="bg-gradient-to-br from-[#1B4B79] to-[#2A69A3] text-white p-8 md:p-10 rounded-3xl shadow-2xl md:max-w-[550px] relative overflow-hidden group hover:shadow-blue-200/50 transition-shadow duration-300">
+            <div className="bg-gradient-to-br from-[#1B4B79] to-[#2A69A3] text-white p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden group hover:shadow-blue-200/50 transition-shadow duration-300">
               {/* Decorative pattern */}
               <div className="absolute inset-0 opacity-10 bg-[linear-gradient(45deg,transparent_25%,white_25%,white_50%,transparent_50%,transparent_75%,white_75%,white_100%)] bg-[length:20px_20px]"></div>
               

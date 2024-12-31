@@ -23,7 +23,7 @@ const HeroSection = () => {
       {/* Right Form */}
       <div
         id="apply-now"
-        className="relative sm:left-14 sm:-top-5 bg-gradient-to-br from-[#f6cb3d] to-[#f6cb3d]/90 p-6 !pt-14 shadow-xl max-w-[400px] custom-div rounded-sm"
+        className="relative sm:left-20 sm:-top-5 bg-gradient-to-br from-[#f6cb3d] to-[#f6cb3d]/90 p-6 !pt-14 shadow-xl max-w-[400px] custom-div rounded-sm"
       >
         <div className="relative">
           <h3 className="text-lg sm:text-xl text-center font-bold text-black">
