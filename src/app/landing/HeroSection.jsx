@@ -76,10 +76,10 @@ const HeroSection = () => {
             />
             <button
               type="submit"
-              className="px-14 rounded-sm py-2 block mx-auto bg-[#1a237e] hover:bg-[#1a237e]/90 text-white  text-[1.4rem] font-normal animate-bounce"
+              className="px-10 rounded-sm py-2 block mx-auto bg-[#1a237e] hover:bg-[#1a237e]/90 text-white  text-[1.4rem] font-normal animate-bounce"
               style={{ marginTop: "2.5rem" }}
             >
-              Submit
+              Register Now
             </button>
           </form>
         </div>
