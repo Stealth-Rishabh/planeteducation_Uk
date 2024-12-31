@@ -6,6 +6,7 @@ import heroBg from "../../assets/hero-bg.png";
 import WhyStudyUK from "./WhyStudyUK";
 import ServicesTimeline from "./ServicesTimeline";
 import UniversityShowcase from "./UniversityShowcase";
+import Testimonials from "./Testimonials";
 
 const Landing = () => {
   return (
@@ -26,6 +27,7 @@ const Landing = () => {
       <WhyStudyUK />
       <UniversityShowcase />
       <ServicesTimeline />
+      <Testimonials />
     </>
   );
 };

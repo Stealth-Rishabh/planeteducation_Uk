@@ -17,7 +17,8 @@ const About = () => {
           <div className="w-full md:w-1/2 animate-fade-in-left">
             <div className="bg-gradient-to-br from-[#1B4B79] to-[#2A69A3] text-white p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden group hover:shadow-blue-200/50 transition-shadow duration-300">
               {/* Decorative pattern */}
-              <div className="absolute inset-0 opacity-10 bg-[linear-gradient(45deg,transparent_25%,white_25%,white_50%,transparent_50%,transparent_75%,white_75%,white_100%)] bg-[length:20px_20px]"></div>
+              <div className="absolute brightness-75 inset-0 opacity-10 bg-[linear-gradient(45deg,transparent_25%,white_25%,white_50%,transparent_50%,transparent_75%,white_75%,white_100%)] bg-[length:20px_20px]"></div>
+              
               
               <h1 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text">
                 About <span className="text-blue-100">Planet Education</span>
