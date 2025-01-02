@@ -119,7 +119,7 @@ export default function Testimonials() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent" />
                     </div>
-                    <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-blue-600 rounded-2xl transform -rotate-12 transition-transform duration-300 group-hover:rotate-0" />
+                    <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-white/10 drop-shadow-lg border backdrop-blur-sm rounded-2xl transform -rotate-12 transition-transform duration-300 group-hover:rotate-0" />
                     <svg
                       className="absolute top-4 right-4 w-8 h-8 text-white/80"
                       viewBox="0 0 24 24"
@@ -138,7 +138,7 @@ export default function Testimonials() {
                       <h3 className="text-2xl md:text-3xl font-bold text-[#1e1b4b]">
                         {testimonial.name}
                       </h3>
-                      <div className="flex flex-col md:flex-row gap-2 text-sm text-blue-600 font-medium">
+                      <div className="flex flex-col md:flex-row gap-2 text-sm text-[#ffc400] font-medium">
                         <span>{testimonial.university}</span>
                         <span className="hidden md:block">•</span>
                         <span>{testimonial.course}</span>
@@ -155,7 +155,7 @@ export default function Testimonials() {
 
           <button
             onClick={prevTestimonial}
-            className="absolute left-0 top-[130%] sm:top-1/2 -translate-y-2/3 sm:-translate-y-1/2 -translate-x-1/2 md:-translate-x-full bg-white/80 backdrop-blur-sm hover:bg-white text-blue-600 p-2 rounded-full shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="absolute left-0 top-[130%] sm:top-1/2 -translate-y-2/3 sm:-translate-y-1/2 -translate-x-1/2 md:-translate-x-full bg-white/80 backdrop-blur-sm hover:bg-white text-[#f6cb3d] p-2 rounded-full shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#f6cb3d]/50"
             aria-label="Previous testimonial"
           >
             <svg
@@ -175,7 +175,7 @@ export default function Testimonials() {
           </button>
           <button
             onClick={nextTestimonial}
-            className="absolute right-0 top-[130%] sm:top-1/2 -translate-y-2/3 sm:-translate-y-1/2 translate-x-1/2 md:translate-x-full bg-white/80 backdrop-blur-sm hover:bg-white text-blue-600 p-2 rounded-full shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="absolute right-0 top-[130%] sm:top-1/2 -translate-y-2/3 sm:-translate-y-1/2 translate-x-1/2 md:translate-x-full bg-white/80 backdrop-blur-sm hover:bg-white text-[#f6cb3d] p-2 rounded-full shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#f6cb3d]/50"
             aria-label="Next testimonial"
           >
             <svg
@@ -203,8 +203,8 @@ export default function Testimonials() {
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === activeIndex
-                  ? "bg-blue-600 w-6"
-                  : "bg-blue-200 hover:bg-blue-300"
+                  ? "bg-[#f6cb3d] w-6"
+                  : "bg-[#f6cb3d]/40 hover:bg-[#f6cb3d]/60"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

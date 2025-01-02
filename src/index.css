@@ -54,3 +54,10 @@ body {
   animation: marqueeinverse 15s linear infinite;
   will-change: transform;
 }
+
+@media (max-width: 640px) {
+  .scroll-container,
+  .scroll-container-inverse {
+    animation-duration: 9s!important;
+  }
+}

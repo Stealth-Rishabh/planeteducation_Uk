@@ -40,14 +40,14 @@ const UniversityShowcase = () => {
   ];
 
   // Duplicate universities for smooth looping
-  
+
   const firstGroup = universities.slice(0, 6);
   const secondGroup = universities.slice(6, 12);
   const thirdGroup = universities.slice(12);
-  
-  const duplicatedUniversities = [...firstGroup, ...firstGroup,];
-  const duplicatedUniversities2 = [...secondGroup, ...secondGroup,];
-  const duplicatedUniversities3 = [...thirdGroup, ...thirdGroup,];
+
+  const duplicatedUniversities = [...firstGroup, ...firstGroup];
+  const duplicatedUniversities2 = [...secondGroup, ...secondGroup];
+  const duplicatedUniversities3 = [...thirdGroup, ...thirdGroup];
   return (
     <div className="flex justify-center items-center pt-16 bg-white p-4">
       <div className="relative w-full max-w-[1200px] bg-[#B12830] rounded-3xl px-4 sm:px-8 py-8">
@@ -56,54 +56,54 @@ const UniversityShowcase = () => {
         </h2>
 
         <div className="relative overflow-hidden space-y-4 max-w-[800px]">
-          <div className="scroll-container flex gap-4 animate-marquee">
+          <div className="scroll-container h-fit flex sm:gap-4 animate-marquee">
             {duplicatedUniversities.map((university, index) => (
               <div
                 key={`${university.name}-${index}`}
-                className="bg-white hover:-translate-y-1 hover:scale-105 transition-all duration-300 p-3 flex items-center justify-center h-24 min-w-[250px]"
+                className="bg-white hover:-translate-y-1 hover:scale-105 transition-all duration-300 p-3 flex items-center justify-center h-16 sm:h-24 min-w-[200px] sm:min-w-[250px]"
               >
                 <img
                   src={university.image}
                   alt={university.name}
-                  className="max-h-20 object-contain"
+                  className="max-h-12 sm:max-h-20 object-contain"
                 />
               </div>
             ))}
-            <div className="bg-white p-4 hover:-translate-y-1 hover:scale-105 transition-all duration-300 flex items-center justify-center h-24 min-w-[250px]">
+            <div className="bg-white h-fit p-4 hover:-translate-y-1 hover:scale-105 transition-all duration-300 flex items-center justify-center min-w-[250px]">
               <span className="text-gray-800 text-lg">&amp; many more..</span>
             </div>
           </div>
-          <div className="scroll-container-inverse flex gap-4 animate-marquee">
+          <div className="scroll-container-inverse flex sm:gap-4 animate-marquee-inverse">
             {duplicatedUniversities2.map((university, index) => (
               <div
                 key={`${university.name}-${index}`}
-                className="bg-white hover:-translate-y-1 hover:scale-105 transition-all duration-300 p-3 flex items-center justify-center h-24 min-w-[250px]"
+                className="bg-white hover:-translate-y-1 hover:scale-105 transition-all duration-300 p-3 flex items-center justify-center h-16 sm:h-24 min-w-[200px] sm:min-w-[250px]"
               >
                 <img
                   src={university.image}
                   alt={university.name}
-                  className="max-h-20 object-contain"
+                  className="max-h-12 sm:max-h-20 object-contain"
                 />
               </div>
             ))}
-            <div className="bg-white p-4 hover:-translate-y-1 hover:scale-105 transition-all duration-300 flex items-center justify-center h-24 min-w-[250px]">
+            <div className="bg-white p-4 hover:-translate-y-1 hover:scale-105 transition-all duration-300 flex items-center justify-center h-fit min-w-[250px]">
               <span className="text-gray-800 text-lg">&amp; many more..</span>
             </div>
           </div>
-          <div className="scroll-container flex gap-4 animate-marquee">
+          <div className="scroll-container flex sm:gap-4 animate-marquee">
             {duplicatedUniversities3.map((university, index) => (
               <div
                 key={`${university.name}-${index}`}
-                className="bg-white hover:-translate-y-1 hover:scale-105 transition-all duration-300 p-3 flex items-center justify-center h-24 min-w-[250px]"
+                className="bg-white hover:-translate-y-1 hover:scale-105 transition-all duration-300 p-3 flex items-center justify-center h-16 sm:h-24 min-w-[200px] sm:min-w-[250px]"
               >
                 <img
                   src={university.image}
                   alt={university.name}
-                  className="max-h-20 object-contain"
+                  className="max-h-12 sm:max-h-20 object-contain"
                 />
               </div>
             ))}
-            <div className="bg-white p-4 hover:-translate-y-1 hover:scale-105 transition-all duration-300 flex items-center justify-center h-24 min-w-[250px]">
+            <div className="bg-white p-4 hover:-translate-y-1 hover:scale-105 transition-all duration-300 flex items-center justify-center h-fit min-w-[250px]">
               <span className="text-gray-800 text-lg">&amp; many more..</span>
             </div>
           </div>
