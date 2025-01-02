@@ -5,7 +5,7 @@ import Chester from "../../assets/Chester.svg";
 import Coventry from "../../assets/Coventry.svg";
 import Cranfield from "../../assets/Cranfield.svg";
 import Derby from "../../assets/Derby.svg";
-import Middlesex from "../../assets/Middlesex.png";
+import Middlesex from "../../assets/Middlesex.webp";
 import Northumbria from "../../assets/Northumbria.svg";
 import Plymouth from "../../assets/Plymouth.svg";
 import Roehampton from "../../assets/Roehampton.svg";

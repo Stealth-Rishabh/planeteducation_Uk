@@ -1,5 +1,5 @@
 import React from 'react';
-import whyStudy from "../../assets/WhyStudy.png";
+import whyStudy from "../../assets/WhyStudy.webp";
 
 // SVG Icons as components for better reusability
 const Icons = {
