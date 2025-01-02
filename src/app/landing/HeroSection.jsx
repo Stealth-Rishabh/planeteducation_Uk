@@ -54,21 +54,42 @@ const HeroSection = () => {
               className="w-full bg-white p-2 "
               required
             />
-            <input
-              placeholder="Current Level of Education"
-              className="w-full bg-white p-2 "
+            <select
+              className="w-full bg-white p-2"
               required
-            />
-            <input
+            >
+              <option value="" disabled selected>Current Level of Education</option>
+              <option value="12th Pass">12th Pass</option>
+              <option value="Graduate">Graduate</option>
+              <option value="Post Graduate">Post Graduate</option>
+            </select>
+            <select
+              className="w-full bg-white p-2"
+              required
+            >
+              <option value="" disabled selected>Prefered Study Level</option>
+              <option value="Graduate">Graduate</option>
+              <option value="Post Graduate">Post Graduate</option>
+              <option value="PhD">PhD</option>
+            </select>
+            <select
+              className="w-full bg-white p-2"
+              required
+            >
+              <option value="" disabled selected>Have you taken up IELET/PTE exam?</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+            {/* <input
               placeholder="Prefered Study Level"
               className="w-full bg-white p-2"
               required
-            />
-            <input
+            /> */}
+            {/* <input
               placeholder="Have you taken up IELET/PTE exam?"
               className="w-full bg-white p-2"
               required
-            />
+            /> */}
             <button
               type="submit"
               className="px-10 rounded-sm py-2 block mx-auto bg-[#1a237e] hover:bg-[#1a237e]/90 text-white  text-[1.4rem] font-normal animate-bounce"

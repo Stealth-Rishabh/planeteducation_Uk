@@ -1,7 +1,57 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import aboutBg from "../../assets/AboutUs.webp";
 
 const About = () => {
+  // State for counting numbers
+  const [years, setYears] = useState(0);
+  const [universities, setUniversities] = useState(0);
+  const [students, setStudents] = useState(0);
+  const [isVisible, setIsVisible] = useState(false); // New state for visibility
+  const statsRef = useRef(null); // Ref for the stats section
+
+  useEffect(() => {
+    // Intersection Observer to detect when the stats section is in the viewport
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Stop observing after it becomes visible
+        }
+      });
+    });
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => {
+      observer.disconnect(); // Cleanup observer on unmount
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      // Counting effect
+      const duration = 2000; // 2 seconds
+      const startTime = performance.now();
+
+      const animateNumbers = (timestamp) => {
+        const elapsed = timestamp - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        setYears(Math.floor(progress * 25)); // 25+
+        setUniversities(Math.floor(progress * 350)); // 350+
+        setStudents(Math.floor(progress * 10000)); // 10k+
+
+        if (progress < 1) {
+          requestAnimationFrame(animateNumbers);
+        }
+      };
+
+      requestAnimationFrame(animateNumbers);
+    }
+  }, [isVisible]);
+
   return (
     <div className="relative mx-auto max-w-7xl w-full bg-gradient-to-br overflow-hidden flex justify-center items-center py-12 sm:py-20">
       {/* Decorative background elements */}
@@ -33,17 +83,17 @@ const About = () => {
               </p>
 
               {/* Stats section */}
-              <div className="grid grid-cols-3 gap-4 mb-8 pt-6 border-t border-white/20">
+              <div ref={statsRef} className="grid grid-cols-3 gap-4 mb-8 pt-6 border-t border-white/20">
                 <div className="text-center">
-                  <div className="font-bold text-2xl text-blue-100">25+</div>
+                  <div className="font-bold text-2xl text-blue-100">{years}+</div>
                   <div className="text-sm text-blue-50">Years</div>
                 </div>
                 <div className="text-center">
-                  <div className="font-bold text-2xl text-blue-100">350+</div>
+                  <div className="font-bold text-2xl text-blue-100">{universities}+</div>
                   <div className="text-sm text-blue-50">Universities</div>
                 </div>
                 <div className="text-center">
-                  <div className="font-bold text-2xl text-blue-100">10k+</div>
+                  <div className="font-bold text-2xl text-blue-100">{students}+</div>
                   <div className="text-sm text-blue-50">Students</div>
                 </div>
               </div>

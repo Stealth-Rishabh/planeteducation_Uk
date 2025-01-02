@@ -162,7 +162,7 @@ const WhyStudyUK = () => {
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
           {/* Left side - Image */}
           <div className="w-full lg:w-5/12">
-            <div className="relative top-4 z-0 sm:w-[630px] h-[300px] md:h-[400px] lg:h-[480px] rounded-2xl overflow-hidden">
+            <div className="relative scale-[0.95] z-0 sm:w-[630px] h-[300px] md:h-[400px] lg:h-[480px] rounded-2xl overflow-hidden">
               <img
                 src={whyStudy}
                 alt="Big Ben and Houses of Parliament, London"
@@ -178,7 +178,7 @@ const WhyStudyUK = () => {
                 {benefits.map((benefit, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center text-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
+                    className="flex flex-col items-center text-center p-4 bg-white rounded-xl shadow-sm transition-transform duration-300 hover:scale-105"
                   >
                     <div className="text-[#C17F59] mb-3">
                       {benefit.icon}
