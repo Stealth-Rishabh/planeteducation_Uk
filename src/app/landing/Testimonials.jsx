@@ -73,7 +73,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="relative h-[1000px] sm:h-auto py-16 md:py-20 px-4 overflow-hidden bg-gradient-to-b from-white to-blue-50">
+    <section className="relative h-[1000px] sm:h-auto pb-16 md:pb-20 px-4 overflow-hidden">
       {/* Background decorative elements */}
       <div
         className="absolute top-0 left-0 w-64 h-64 bg-blue-100 rounded-full opacity-30 -translate-x-1/2 -translate-y-1/2"
@@ -86,7 +86,7 @@ export default function Testimonials() {
 
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1e1b4b] mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
             Hear From Our Students
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">

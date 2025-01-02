@@ -55,11 +55,6 @@ const HeroSection = () => {
               required
             />
             <input
-              placeholder="Your Prefered Study Destination"
-              className="w-full bg-white p-2 "
-              required
-            />
-            <input
               placeholder="Current Level of Education"
               className="w-full bg-white p-2 "
               required
