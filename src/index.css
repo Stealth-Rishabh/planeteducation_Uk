@@ -58,6 +58,19 @@ body {
 @media (max-width: 640px) {
   .scroll-container,
   .scroll-container-inverse {
-    animation-duration: 9s!important;
+    animation-duration: 9s !important;
+  }
+}
+
+.hero-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .hero-bg {
+    background-attachment: scroll;
   }
 }
